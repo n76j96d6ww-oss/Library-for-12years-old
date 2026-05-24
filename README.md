@@ -1,14 +1,17 @@
 # Library-for-12years-old
 
-A small static library website for young readers, built with plain HTML, CSS,
-and JavaScript.
+一个给 12 岁孩子使用的静态小图书馆网页。
 
-## Files
+## 功能
 
-- `index.html` - page structure and content
-- `styles.css` - responsive layout and visual design
-- `script.js` - book filtering, search, and saved reading shelf behavior
+- 30 本中英文公版经典书卡
+- 每本书提供蓝色「去阅读」按钮，跳转到免费在线阅读页面
+- 阅读打卡、读完日期和评分
+- 阅读进度条与积分
+- 每读完 3 本可填写一次奖励愿望
+- 第 15 本半程奖励，第 30 本完成大奖励
+- 勋章记录与每日阅读打卡
 
-## Run locally
+## 使用
 
-Open `index.html` in a browser, or serve the folder with any static web server.
+直接打开 `index.html` 即可使用。阅读进度会保存在当前浏览器的 `localStorage` 中。
