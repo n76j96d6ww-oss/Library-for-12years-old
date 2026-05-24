@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>30 本阅读冒险计划</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero__content">
+        <p class="eyebrow">给 12 岁小朋友的小图书馆</p>
+        <h1>30 本阅读冒险计划</h1>
+        <p>
+          内置中英文少儿文学书单、读书打卡、进度条、每 3 本奖励愿望和勋章记录。
+        </p>
+      </div>
+      <div class="hero__card" aria-label="阅读总览">
+        <span class="hero__number" id="completed-count">0</span>
+        <span>已读 / 30 本</span>
+      </div>
+    </header>
+
+    <main>
+      <section class="panel progress-panel" aria-labelledby="progress-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Reading Progress</p>
+            <h2 id="progress-title">阅读进度条</h2>
+          </div>
+          <button class="secondary-button" id="reset-button" type="button">
+            重置记录
+          </button>
+        </div>
+
+        <div class="progress-summary">
+          <div>
+            <strong id="progress-text">0%</strong>
+            <span>完成进度</span>
+          </div>
+          <div>
+            <strong id="points-count">0</strong>
+            <span>阅读积分</span>
+          </div>
+          <div>
+            <strong id="next-reward">还差 3 本</strong>
+            <span>下次奖励</span>
+          </div>
+        </div>
+
+        <div class="progress-bar" aria-label="30 本阅读进度">
+          <div class="progress-bar__fill" id="progress-fill"></div>
+        </div>
+        <div class="progress-grid" id="progress-grid" aria-label="每本书进度格"></div>
+      </section>
+
+      <section class="dashboard">
+        <article class="panel" aria-labelledby="reward-title">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Rewards</p>
+              <h2 id="reward-title">奖励愿望</h2>
+            </div>
+          </div>
+          <p class="helper-text">
+            每读完 3 本书，可以向妈妈提出 1 个奖励愿望；第 15 本是半程奖励，第 30 本是完成大奖励。
+          </p>
+          <div class="reward-list" id="reward-list"></div>
+        </article>
+
+        <article class="panel" aria-labelledby="badge-title">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Badges</p>
+              <h2 id="badge-title">勋章记录</h2>
+            </div>
+          </div>
+          <div class="badge-list" id="badge-list"></div>
+        </article>
+      </section>
+
+      <section class="panel" aria-labelledby="daily-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Daily Check-in</p>
+            <h2 id="daily-title">每日阅读打卡</h2>
+          </div>
+          <button class="primary-button" id="daily-checkin-button" type="button">
+            今天已阅读
+          </button>
+        </div>
+        <p class="helper-text">
+          连续 7 天每天阅读，就可以获得“坚持之星”勋章。
+        </p>
+        <div class="daily-status" id="daily-status"></div>
+      </section>
+
+      <section class="panel" aria-labelledby="books-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Book List</p>
+            <h2 id="books-title">30 本起步书单与打卡记录</h2>
+          </div>
+          <div class="filters" aria-label="筛选书单">
+            <button class="filter-button is-active" type="button" data-filter="all">
+              全部
+            </button>
+            <button class="filter-button" type="button" data-filter="中文">
+              中文
+            </button>
+            <button class="filter-button" type="button" data-filter="英文">
+              英文
+            </button>
+            <button class="filter-button" type="button" data-filter="completed">
+              已读
+            </button>
+          </div>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>序号</th>
+                <th>书名</th>
+                <th>分类</th>
+                <th>难度</th>
+                <th>打卡</th>
+                <th>读完日期</th>
+                <th>评分</th>
+                <th>积分</th>
+                <th>勋章 / 奖励</th>
+              </tr>
+            </thead>
+            <tbody id="book-table"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>愿每一本书，都像一扇打开世界的小窗。</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
