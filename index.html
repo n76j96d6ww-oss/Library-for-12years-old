@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Little Library</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav-bar" aria-label="Main navigation">
+      <a class="brand" href="#home" aria-label="Little Library home">
+        <span class="brand-mark" aria-hidden="true">LL</span>
+        <span>Little Library</span>
+      </a>
+      <div class="nav-links">
+        <a href="#books">Books</a>
+        <a href="#shelf">My Shelf</a>
+        <a href="#visit">Visit</a>
+      </div>
+    </nav>
+
+    <section id="home" class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">A friendly space for young readers</p>
+        <h1>Find your next adventure in our little library.</h1>
+        <p>
+          Browse popular books for curious 12-year-old readers, save favorites
+          to your shelf, and discover stories by mood or subject.
+        </p>
+        <a class="button primary" href="#books">Browse books</a>
+      </div>
+      <div class="hero-card" aria-label="Library highlights">
+        <div>
+          <strong>120+</strong>
+          <span>Stories</span>
+        </div>
+        <div>
+          <strong>8</strong>
+          <span>Reading clubs</span>
+        </div>
+        <div>
+          <strong>Free</strong>
+          <span>Weekend visits</span>
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section class="section intro" aria-labelledby="welcome-title">
+      <div>
+        <p class="eyebrow">Welcome</p>
+        <h2 id="welcome-title">A cozy library built for discovery.</h2>
+      </div>
+      <p>
+        Use the filters below to explore books by genre. Add any title to your
+        personal shelf and keep the list even after refreshing the page.
+      </p>
+    </section>
+
+    <section id="books" class="section books-section" aria-labelledby="books-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Book collection</p>
+          <h2 id="books-title">Recommended reads</h2>
+        </div>
+        <label class="search-label">
+          <span class="sr-only">Search books</span>
+          <input id="book-search" type="search" placeholder="Search by title, author, or genre">
+        </label>
+      </div>
+
+      <div id="category-filters" class="filters" aria-label="Book category filters"></div>
+      <div id="book-list" class="book-grid" aria-live="polite"></div>
+      <p id="empty-message" class="empty-message" hidden>No books match your search yet.</p>
+    </section>
+
+    <section id="shelf" class="section shelf-section" aria-labelledby="shelf-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">My shelf</p>
+          <h2 id="shelf-title">Saved reading list</h2>
+        </div>
+        <button id="clear-shelf" class="button secondary" type="button">Clear shelf</button>
+      </div>
+      <ul id="reading-shelf" class="reading-shelf"></ul>
+      <p id="shelf-empty" class="empty-message">Your shelf is empty. Add a book to begin.</p>
+    </section>
+
+    <section id="visit" class="section visit-section" aria-labelledby="visit-title">
+      <div>
+        <p class="eyebrow">Visit us</p>
+        <h2 id="visit-title">Open after school and on weekends.</h2>
+        <p>
+          Monday to Friday, 3:30 PM - 7:00 PM<br>
+          Saturday, 10:00 AM - 4:00 PM
+        </p>
+      </div>
+      <form class="visit-card" aria-label="Library newsletter sign up">
+        <h3>Get reading ideas</h3>
+        <p>Receive one short book recommendation each week.</p>
+        <label>
+          Email address
+          <input type="email" placeholder="reader@example.com" required>
+        </label>
+        <button class="button primary" type="submit">Sign up</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Little Library. Built with HTML, CSS, and JavaScript.</p>
+  </footer>
+</body>
+</html>
